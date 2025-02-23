@@ -22,6 +22,11 @@ func main(){
 	}else{
 		fmt.Println("xxxx ")
 	}
+
+	//short 
+	if x:=10;x>5{
+		fmt.Println("x is greter than 5")
+	}
    
 	//switch 
 	switch 20 {
@@ -64,21 +69,52 @@ func main(){
 		fmt.Println(msg2)
 	}
 
+	//for loop as while loop
 	i := 0
 	for i < 5 {
 		fmt.Println("value of  i: ",i)
 		i++
-	}
+	} 
 
+	//for loop
 	for i := 0; i < 5;i++{
 		fmt.Println("i: ",i)
 	}
 
+    //for without condition ->❌ Warning: This will run forever unless you add a break.
+    // for {
+	// 	fmt.Println("this is an infinite loop")
+	// }
+	
+	//loop with break 
+	for i:=1;i<=10;i++{
+		if i==5{
+			continue
+		}
+		if i == 8{
+			break
+		}
+	}
+
+	//loop over arry 
 	numbers := []int{10,20,30,40}
 	for index,value := range numbers{
 		fmt.Println("index :%d, value :%d\n",index,value)
 	}
 
+	arr := [3]string{"go","python","java"}
+     for i ,value := range arr{
+		fmt.Println(i,value)
+	 }
+
+     // Looping Over a Slice
+	 nums := []int{10,20,30,40}
+     // _ is used to ignore the index if we don't need it.
+	 for _,value := range nums{
+		fmt.Println(value)
+	 }
+
+	 //loop over map
 	fruits := map[string]string{"a": "Apple", "b": "Banana", "c": "Cherry"}
     for key, value := range fruits {
         fmt.Printf("Key: %s, Value: %s\n", key, value)
